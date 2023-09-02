@@ -15,10 +15,38 @@
      --rough: 'Playfair Display', serif;
  }
 
-
  * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+
+     ::-webkit-scrollbar {
+         width: 10px;
+     }
+
+     ::-webkit-scrollbar-track {
+         box-shadow: inset 0 0 5px var(--grey);
+         border-radius: 20px;
+     }
+
+     ::-webkit-scrollbar-thumb {
+         background: var(--red);
+         border-radius: 10px;
+     }
+
+     ::-webkit-scrollbar-thumb:hover {
+         background: var(--red);
+     }
+ }
+
+ main {
+     width: 100%;
      background-color: black;
-     color: white;
+     color: rgb(255, 255, 255);
+     overflow-x: hidden;
+ }
+
+ .navbars {
      overflow: hidden;
  }
 
@@ -103,7 +131,10 @@
  .leftbody button {
      padding: 15px 50px;
      border-radius: 50px;
+     color: var(--red);
      border-width: 2.5px;
+     font-family: var(--smooth);
+     background-color: black;
      border-color: var(--red);
  }
 
@@ -121,4 +152,38 @@
  .leftbody h5 {
      font-family: var(--smooth);
      color: var(--grey);
+ }
+
+
+
+
+
+
+
+
+
+
+ /* who am i  */
+
+ .whoami {
+     background-color: #0e0f0f;
+ }
+
+ .whoami h2 {
+     font-family: var(--smooth);
+     color: white;
+     margin-left: 45%;
+ }
+
+ .whoami .dot {
+     color: var(--red);
+ }
+
+ .whoami .line {
+     width: 10%;
+ }
+
+ .whoami h1 {
+     color: var(--red);
+     margin-left: 40%;
  }
