@@ -145,7 +145,7 @@ i {
     color: var(--red);
 }
 
-.leftbody h1 {
+.leftbody h2 {
     margin: 0%;
     font-size: 400%;
 }
@@ -320,4 +320,8 @@ i {
 .skill3 .skill-count3 {
     right: 0;
     color: #666767;
+}
+
+.wrap1 {
+    margin-left: -30px;
 }
