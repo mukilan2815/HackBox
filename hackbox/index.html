@@ -131,30 +131,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Initialize AOS
         AOS.init();
 
         document.addEventListener("DOMContentLoaded", function () {
             const scrollToAboutLink = document.getElementById("scrollToAbout");
             const aboutSection = document.getElementById("about");
             let scrolling = false;
-
-            // Add a click event listener to the "About" link
             scrollToAboutLink.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent the default link behavior
-
+                event.preventDefault();
                 if (!scrolling) {
                     scrolling = true;
-
-                    // Use smooth scrolling to scroll to the "About" section
                     aboutSection.scrollIntoView({
                         behavior: "smooth"
                     });
-
-                    // Allow scrolling after a brief delay
                     setTimeout(function () {
                         scrolling = false;
-                    }, 1500); // Adjust the delay time as needed
+                    }, 1500); 
                 }
             });
         });
