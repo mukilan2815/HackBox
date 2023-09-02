@@ -1,189 +1,323 @@
- @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
 
- /* Fonts and color we gonna use here  */
+/* Fonts and color we gonna use here  */
 
- /* font-family: var(--rough); */
+/* font-family: var(--rough); */
 
- /* font-family: var(--smooth); */
- /* grey color - 666767
+/* font-family: var(--smooth); */
+/* grey color - 666767
  red color - fe2020 */
- :root {
-     --grey: #666767;
-     --red: #fe2020;
-     --smooth: 'Montserrat', sans-serif;
-     --rough: 'Playfair Display', serif;
- }
+:root {
+    --grey: #666767;
+    --red: #fe2020;
+    --smooth: 'Montserrat', sans-serif;
+    --rough: 'Playfair Display', serif;
+}
 
- * {
-     padding: 0;
-     margin: 0;
-     box-sizing: border-box;
+* {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
-     ::-webkit-scrollbar {
-         width: 10px;
-     }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 
-     ::-webkit-scrollbar-track {
-         box-shadow: inset 0 0 5px var(--grey);
-         border-radius: 20px;
-     }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--grey);
+        border-radius: 20px;
+    }
 
-     ::-webkit-scrollbar-thumb {
-         background: var(--red);
-         border-radius: 10px;
-     }
+    ::-webkit-scrollbar-thumb {
+        background: var(--red);
+        border-radius: 10px;
+    }
 
-     ::-webkit-scrollbar-thumb:hover {
-         background: var(--red);
-     }
- }
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--red);
+    }
+}
 
- main {
-     width: 100%;
-     background-color: black;
-     color: rgb(255, 255, 255);
-     overflow-x: hidden;
- }
+main {
+    width: 100%;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
 
- .navbars {
-     overflow: hidden;
- }
+.navbars {
+    overflow: hidden;
+}
 
- .icons {
-     padding: 10px 20px;
-     float: right;
-     margin-right: 19%;
- }
+.icons {
+    padding: 10px 20px;
+    float: right;
+    margin-right: 19%;
+}
 
- i {
-     padding: 3px 22px;
- }
+i {
+    padding: 3px 22px;
+}
 
- /* sophia name */
- .name {
-     padding: 10px 0px 0px 320px;
-     font-size: 40px;
-     font-family: 'Playfair display';
- }
+/* sophia name */
+.name {
+    margin: 40px 0px 9px 310px;
+    font-size: 45px;
+    font-family: 'Playfair display';
+}
 
- /* home about contact  */
- .navbar {
-     margin-top: -70px;
- }
+/* home about contact  */
+.navbar {
+    margin-top: -70px;
+}
 
- .navul {
-     display: flex;
-     list-style-type: none;
-     float: right;
-     margin-right: 20%;
- }
+.navul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin-right: 12%;
+}
 
- .navul li {
-     padding-right: 80px;
- }
+.navul li {
+    padding-right: 80px;
+}
 
- .navbar a {
-     color: var(--grey);
-     text-decoration: none;
-     list-style-type: none;
-     font-family: var(--smooth);
-     font-weight: 700;
- }
+.navbar a {
+    color: var(--grey);
+    text-decoration: none;
+    list-style-type: none;
+    font-family: var(--smooth);
+    font-weight: 700;
+}
 
- .navbar a::after {
-     content: '';
-     display: block;
-     width: 0;
-     height: 4px;
-     border-radius: 50px;
-     background: var(--red);
-     transition: width .3s;
- }
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    border-radius: 50px;
+    background: var(--red);
+    transition: width .3s;
+}
 
- .navbar a:hover::after {
-     width: 100%;
-     transition: width .3s;
- }
+.navbar a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
 
- /* body  */
- .body {
-     display: flex;
- }
+/* body  */
+.body {
+    display: flex;
+}
 
- .rightbody {
-     width: 50%;
+.rightbody {
+    width: 50%;
 
- }
+}
 
- .rightbody img {
-     height: 100%;
-     width: 90%;
-     float: left;
- }
+.rightbody img {
+    height: 100%;
+    width: 90%;
+    float: left;
+}
 
- .leftbody {
-     width: 50%;
-     padding: 10% 0% 0% 10%;
-     margin-left: 10%;
- }
+.leftbody {
+    width: 50%;
+    padding: 10% 0% 0% 10%;
+    margin-left: 10%;
+}
 
- .leftbody button {
-     padding: 15px 50px;
-     border-radius: 50px;
-     color: var(--red);
-     border-width: 2.5px;
-     font-family: var(--smooth);
-     background-color: black;
-     border-color: var(--red);
- }
+.leftbody button {
+    padding: 15px 50px;
+    border-radius: 50px;
+    color: var(--red);
+    border-width: 2.5px;
+    font-family: var(--smooth);
+    background-color: black;
+    border-color: var(--red);
+}
 
- .leftbody h4 {
-     font-weight: 600;
-     font-family: var(--smooth);
-     color: var(--red);
- }
+.leftbody h4 {
+    font-weight: 600;
+    font-family: var(--smooth);
+    color: var(--red);
+}
 
- .leftbody h1 {
-     margin: 0%;
-     font-size: 400%;
- }
+.leftbody h1 {
+    margin: 0%;
+    font-size: 400%;
+}
 
- .leftbody h5 {
-     font-family: var(--smooth);
-     color: var(--grey);
- }
+.leftbody h5 {
+    font-family: var(--smooth);
+    color: var(--grey);
+}
 
+/* who am i  */
 
+.whoami {
+    background-color: #0e0f0f;
+}
 
+.allwho {
+    display: flex;
+    margin-left: 10%;
+}
 
+.whoami h2 {
+    font-family: var(--smooth);
+    color: white;
+    margin-left: 45%;
+    font-weight: 500;
+}
 
+.whoami .dot {
+    color: var(--red);
+}
 
+.whoami .line {
+    width: 10%;
+}
 
+.whoami h1 {
+    color: var(--red);
+    margin-left: 35%;
+    font-size: 55px;
+    font-family: var(--rough);
+}
 
+.square {
+    width: 522px;
+    height: 623px;
+    border: 3px solid var(--red);
+}
 
+.leftwho {
+    margin-left: 7%;
+    margin-top: 5%;
+}
 
- /* who am i  */
+.secgirl {
+    height: 620px;
+    width: 522px;
+    margin-left: 3.5%;
+    margin-top: 3.5%;
+}
 
- .whoami {
-     background-color: #0e0f0f;
- }
+.rightwho {
+    font-family: var(--smooth);
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 30%;
+    float: right;
+}
 
- .whoami h2 {
-     font-family: var(--smooth);
-     color: white;
-     margin-left: 45%;
- }
+.rightwho h6 {
+    color: white;
+    font-size: 20px;
+}
 
- .whoami .dot {
-     color: var(--red);
- }
+.rightwho p {
+    color: var(--grey);
+    font-size: 20px;
+}
 
- .whoami .line {
-     width: 10%;
- }
+.rightwho button {
+    padding: 15px 50px;
+    border-radius: 50px;
+    color: var(--red);
+    border-width: 2.5px;
+    font-family: var(--smooth);
+    background-color: transparent;
+    border-color: var(--red);
+    margin-top: 35%;
+}
 
- .whoami h1 {
-     color: var(--red);
-     margin-left: 40%;
- }
+.bars {
+    display: flex;
+    margin-left: 6%;
+}
+
+.wrapper {
+    width: 400px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 35px;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+}
+
+.skill>p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: var(--smooth);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.skill:before {
+    width: 100%;
+    height: 3px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgb(96, 96, 96);
+    bottom: 0;
+    border-radius: 10px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 3px;
+    background: var(--red);
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+
+.skill-bar span {
+    position: absolute;
+    margin-bottom: 3%;
+    top: -30px;
+    font-size: 18px;
+    padding: 3px 0px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    position: relative;
+}
+
+.skill1 .skill-count1 {
+    right: 0;
+    color: #666767;
+}
+
+.skill1 {
+    width: 95%;
+}
+
+.skill2 {
+    width: 85%;
+}
+
+.skill2 .skill-count2 {
+    right: 0;
+    color: #666767;
+}
+
+.skill3 {
+    width: 75%;
+}
+
+.skill3 .skill-count3 {
+    right: 0;
+    color: #666767;
+}
