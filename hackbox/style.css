@@ -1,27 +1,71 @@
  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
 
-/* Font we gonna use here  */
+ /* Fonts and color we gonna use here  */
 
-/* font-family: 'Playfair Display', serif; */
+ /* font-family: 'Playfair Display', serif; */
 
-/* font-family: 'Montserrat', sans-serif; */
-* {
-    background-color: black;
-}
+ /* font-family: 'Montserrat', sans-serif; */
+ /* grey color - 666767
+ red color - fe2020 */
+ * {
+     background-color: black;
+     color: white;
+     overflow: hidden;
+ }
 
-.icons {
-    padding: 22px;
-    float: right;
-    margin-right: 19%;
-}
+ .icons {
+     padding: 10px 20px;
+     float: right;
+     margin-right: 19%;
+ }
 
-i {
-    padding: 0px 22px;
-}
+ i {
+     padding: 3px 22px;
+ }
 
+ /* sophia name */
+ .name {
+     padding: 10px 0px 0px 320px;
+     font-size: 40px;
+     font-family: 'Playfair display';
+ }
 
+ /* home about contact  */
+ .navbar {
+     margin-top: -70px;
+ }
 
-/* font-family: 'Playfair Display', serif; */
+ .navul {
+     display: flex;
+     list-style-type: none;
+     float: right;
+     margin-right: 20%;
+ }
 
-/* font-family: 'Montserrat', sans-serif; */
+ .navul li {
+     padding-right: 80px;
+ }
+
+ .navbar a {
+     color: #666767;
+     text-decoration: none;
+     list-style-type: none;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+ }
+
+ .navbar a::after {
+     content: '';
+     display: block;
+     width: 0;
+     height: 4px;
+     border-radius: 50px;
+     background: #d80000;
+     transition: width .3s;
+ }
+
+ .navbar a:hover::after {
+     width: 100%;
+     transition: width .3s;
+ }
