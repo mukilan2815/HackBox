@@ -3,11 +3,19 @@
 
  /* Fonts and color we gonna use here  */
 
- /* font-family: 'Playfair Display', serif; */
+ /* font-family: var(--rough); */
 
- /* font-family: 'Montserrat', sans-serif; */
+ /* font-family: var(--smooth); */
  /* grey color - 666767
  red color - fe2020 */
+ :root {
+     --grey: #666767;
+     --red: #fe2020;
+     --smooth: 'Montserrat', sans-serif;
+     --rough: 'Playfair Display', serif;
+ }
+
+
  * {
      background-color: black;
      color: white;
@@ -48,10 +56,10 @@
  }
 
  .navbar a {
-     color: #666767;
+     color: var(--grey);
      text-decoration: none;
      list-style-type: none;
-     font-family: 'Montserrat', sans-serif;
+     font-family: var(--smooth);
      font-weight: 700;
  }
 
@@ -61,11 +69,56 @@
      width: 0;
      height: 4px;
      border-radius: 50px;
-     background: #d80000;
+     background: var(--red);
      transition: width .3s;
  }
 
  .navbar a:hover::after {
      width: 100%;
      transition: width .3s;
+ }
+
+ /* body  */
+ .body {
+     display: flex;
+ }
+
+ .rightbody {
+     width: 50%;
+
+ }
+
+ .rightbody img {
+     height: 100%;
+     width: 90%;
+     float: left;
+ }
+
+ .leftbody {
+     width: 50%;
+     padding: 10% 0% 0% 10%;
+     margin-left: 10%;
+ }
+
+ .leftbody button {
+     padding: 15px 50px;
+     border-radius: 50px;
+     border-width: 2.5px;
+     border-color: var(--red);
+ }
+
+ .leftbody h4 {
+     font-weight: 600;
+     font-family: var(--smooth);
+     color: var(--red);
+ }
+
+ .leftbody h1 {
+     margin: 0%;
+     font-size: 400%;
+ }
+
+ .leftbody h5 {
+     font-family: var(--smooth);
+     color: var(--grey);
  }
