@@ -40,6 +40,7 @@
     }
 }
 
+
 main {
     width: 100%;
     background-color: black;
@@ -49,62 +50,84 @@ main {
 
 .navbars {
     overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 1;
 }
 
+.navbars .contentnavbar ul.items li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbars .contentnavbar ul.items li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--red);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbars .contentnavbar ul.items li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbars .contentnavbar ul.items li.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+
 .icons {
-    padding: 10px 20px;
-    float: right;
-    margin-right: 19%;
+    right: 0;
+    margin-right: 13%;
+    position: absolute;
+    width: 20%;
 }
 
 i {
-    padding: 3px 22px;
+    margin-left: 18%;
 }
 
 /* sophia name */
-.name {
-    margin: 40px 0px 9px 310px;
-    font-size: 45px;
-    font-family: 'Playfair display';
-}
-
-/* home about contact  */
-.navbar {
-    margin-top: -70px;
-}
-
-.navul {
+.contentnavbar {
     display: flex;
-    list-style-type: none;
-    float: right;
-    margin-right: 12%;
+    justify-content: space-around;
+    align-items: baseline;
 }
 
-.navul li {
-    padding-right: 80px;
+.name {
+    font-size: 300%;
 }
 
-.navbar a {
-    color: var(--grey);
-    text-decoration: none;
-    list-style-type: none;
+.items {
     font-family: var(--smooth);
-    font-weight: 700;
+    font-weight: 600;
+    color: var(--grey);
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
 }
 
-.navbar a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 4px;
-    border-radius: 50px;
-    background: var(--red);
-    transition: width .3s;
-}
-
-.navbar a:hover::after {
-    width: 100%;
-    transition: width .3s;
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* body  */
@@ -125,8 +148,8 @@ i {
 
 .leftbody {
     width: 50%;
-    padding: 10% 0% 0% 10%;
-    margin-left: 10%;
+    padding: 15% 0% 0% 10%;
+    margin-left: 8%;
 }
 
 .leftbody button {
@@ -135,8 +158,15 @@ i {
     color: var(--red);
     border-width: 2.5px;
     font-family: var(--smooth);
-    background-color: black;
+    background-color: transparent;
     border-color: var(--red);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.leftbody button:hover {
+    background-color: var(--red);
+    color: white;
 }
 
 .leftbody h4 {
@@ -147,7 +177,7 @@ i {
 
 .leftbody h2 {
     margin: 0%;
-    font-size: 400%;
+    font-size: 350%;
 }
 
 .leftbody h5 {
@@ -159,6 +189,12 @@ i {
 
 .whoami {
     background-color: #0e0f0f;
+}
+
+.line {
+    content: "       ";
+    display: inline-flex;
+    border-bottom: 0.5px solid #9E9E9E;
 }
 
 .allwho {
@@ -217,6 +253,8 @@ i {
 .rightwho h6 {
     color: white;
     font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5;
 }
 
 .rightwho p {
@@ -233,7 +271,16 @@ i {
     background-color: transparent;
     border-color: var(--red);
     margin-top: 35%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
+
+.rightwho button:hover {
+    background-color: var(--red);
+    color: white;
+    transform: scale(1.05);
+}
+
 
 .bars {
     display: flex;
