@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        #progress-bars {
+            display: grid;
+            padding-left: 10%;
+            padding-top: 15%;
+            grid-template-columns: repeat(2, 40%);
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+        }
+
+        .bar-container {
+            width: 250px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bar {
+            width: 140%;
+            height: 2px;
+            background-color: lightgrey;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            padding-left: 0%;
+        }
+
+        .progress {
+            width: 0;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 1s ease-in-out;
+        }
+
+        .percentage {
+            margin-top: 10px;
+            font-size: 18px;
+            color: white;
+            position: absolute;
+            top: -20px; /* Adjust this value to position the percentage label */
+            right: 0; /* Position the label at the end of the bar */
+        }
+        .tabar{
+            display: grid;
+            grid-template-columns: repeat(2, 300px);
+        }
+        .bar-container h1{
+            color: aliceblue;
+            font-size: 20px;
+        }
+        .bar-container h2{
+            color: aquamarine;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-bars">
+        <div class="bar-container">
+            <div class="tabar">
+                <h1>HTML </h1>
+                <h2>30%</h2>
+            </div>
+            <div class="bar">
+                <div class="progress" style="width: 0;"></div>
+            </div>
+            <div class="percentage">30%</div>
+        </div>
+        <div class="bar-container">
+            <div class="tabar">
+                <h1>CSS </h1>
+                <h2>60%</h2>
+            </div>
+            <div class="bar">
+                <div class="progress" style="width: 0;"></div>
+            </div>
+            <div class="percentage">60%</div>
+        </div>
+        <div class="bar-container">
+            <div class="tabar">
+                <h1>JS </h1>
+                <h2>45%</h2>
+            </div>
+            <div class="bar">
+                <div class="progress" style="width: 0;"></div>
+            </div>
+            <div class="percentage">45%</div>
+        </div>
+        <div class="bar-container">
+            <div class="tabar">
+                <h1>React </h1>
+                <h2>75%</h2>
+            </div>
+            <div class="bar">
+                <div class="progress" style="width: 0;"></div>
+            </div>
+            <div class="percentage">75%</div>
+        </div>
+        <div class="bar-container">
+            <div class="tabar">
+                <h1>Node </h1>
+                <h2>20%</h2>
+            </div>
+            <div class="bar">
+                <div class="progress" style="width: 0;"></div>
+            </div>
+            <div class="percentage">20%</div>
+        </div>
+        <div class="bar-container">
+            <div class="tabar">
+                <h1>Django </h1>
+                <h2>95%</h2>
+            </div>
+            <div class="bar">
+                <div class="progress" style="width: 0;"></div>
+            </div>
+            <div class="percentage">95%</div>
+        </div>
+    </div>
+
+    <script>
+        const bars = document.querySelectorAll('.bar');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progress = entry.target.querySelector('.progress');
+                    const percentage = parseInt(entry.target.nextElementSibling.textContent);
+                    progress.style.width = percentage + '%';
+                }
+            });
+        }, {
+            threshold: 0.5 // Adjust this threshold as needed
+        });
+
+        bars.forEach(bar => {
+            observer.observe(bar);
+        });
+    </script>
+</body>
+</html>

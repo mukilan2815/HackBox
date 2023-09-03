@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.b {
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dbgCol: #000000;
+    --lbgCol: #000000;
+    --priCol: #fe2020;
+    --secCol: #ffffff;
+    --triCol: rgb(117, 117, 117);
+}
+
+
+/*What I Do*/
+.watIDo {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.watIDo .top {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.watIDo .top hr {
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: super;
+    line-height: 5px;
+}
+
+.whoami hr {
+    width: 70px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: super;
+    line-height: 4px;
+}
+
+.watIDo .top h4 {
+    color: var(--secCol);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 5px;
+    margin: 0;
+}
+
+.watIDo .top h1 {
+    color: var(--priCol);
+    font-weight: bolder;
+    line-height: 5px;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.watIDo .top p {
+    color: var(--triCol);
+    font-size: 90%;
+}
+
+.watIDo .cont {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.watIDo .cont .card {
+    padding: 5px 0px 5px 0px;
+    width: 28%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.watIDo .cont .card img {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+.watIDo .cont .card h4 {
+    padding: 10px 0px 20px 0px;
+    color: var(--secCol);
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.watIDo .cont .card p {
+    color: var(--triCol);
+    font-size: 90%;
+}
+
+
+/*Work Experience*/
+.workExp {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: var(--lbgCol);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.workExp .top {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.workExp .top hr {
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: super;
+    line-height: 5px;
+}
+
+.workExp .top h4 {
+    color: var(--secCol);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 5px;
+    margin: 0;
+}
+
+.workExp .top h1 {
+    color: var(--priCol);
+    font-weight: bolder;
+    line-height: 5px;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.workExp .top p {
+    color: var(--triCol);
+    font-size: 90%;
+}
+
+.workExp .boxy {
+    margin-right: 50%;
+    margin: auto;
+    width: 90%;
+    height: 250px;
+    text-align: center;
+    display: block;
+}
+
+.workExp .lsidtxt {
+    vertical-align: super;
+    width: 25%;
+    padding-left: 200px;
+    margin: auto;
+    margin-left: 0;
+    text-align: right;
+    float: left;
+
+}
+
+.workExp .lsidtxt h5 {
+    color: var(--priCol);
+    font-weight: 500;
+    font-size: 95%;
+    line-height: 5px;
+
+}
+
+.workExp .lsidtxt h2 {
+    color: var(--secCol);
+    line-height: 5px;
+}
+
+.workExp .lsidtxt p {
+    color: var(--triCol);
+}
+
+.workExp .rsidtxt {
+    vertical-align: super;
+    width: 25%;
+    padding-right: 200px;
+    margin: auto;
+    margin-left: 0;
+    text-align: left;
+    float: right;
+}
+
+.workExp .rsidtxt h5 {
+    color: var(--priCol);
+    font-weight: 500;
+    font-size: 95%;
+    line-height: 5px;
+}
+
+.workExp .rsidtxt h2 {
+    color: var(--secCol);
+    font-size: 130%;
+    font-weight: 500;
+    line-height: 5px;
+}
+
+.workExp .rsidtxt p {
+    color: var(--triCol);
+}
+
+.workExp .box {
+    display: flex;
+    width: 160px;
+    height: 100px;
+    position:absolute;
+    left: 45%;
+    transform: translate(-50%, 50%);
+}
+
+.workExp .box .rbox {
+    width: 160px;
+    height: 50px;
+    background-color: var(--priCol);
+    margin: auto;
+    color: var(--secCol);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workExp .box .wbox {
+    width: 160px;
+    height: 50px;
+    background-color: var(--secCol);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--priCol);
+}
+
+
+/*Our Portfolio*/
+.ourPort {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: var(--dbgCol);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ourPort .top {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.ourPort .top hr {
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: super;
+    line-height: 5px;
+}
+
+.ourPort .top h4 {
+    color: var(--secCol);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 5px;
+    margin: 0;
+}
+
+.ourPort .top h1 {
+    color: var(--priCol);
+    font-weight: bolder;
+    line-height: 5px;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.ourPort .top p {
+    color: var(--triCol);
+    font-size: 90%;
+}
+
+
+/*Nav*/
+.ourPort .naav {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.ourPort .naav ul li {
+    color: var(--secCol);
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 5px;
+}
+
+.ourPort .naav ul li,
+.ourPort .naav ul li:after,
+.ourPort .naav ul li:before {
+    transition: all .5s;
+}
+
+.ourPort .stroke ul li {
+    position: relative;
+}
+
+.ourPort .stroke ul li:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #fe2020;
+    height: 3px;
+}
+
+.ourPort .stroke ul li:hover:after {
+    width: 100%;
+}
+
+/*design*/
+.dashed-line {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    width: 1.5px;
+    height: 700px;
+    background-image: linear-gradient(to bottom, #343434 60%, transparent 40%);
+    background-position: center bottom;
+    background-repeat: repeat-y;
+    background-size: 6px 30px;
+}
