@@ -1,0 +1,226 @@
+:root {
+    --grey: #666767;
+    --red: #fe2020;
+    --smooth: 'Montserrat', sans-serif;
+    --rough: 'Playfair Display', serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 9;
+    }
+
+    to {
+        opacity: 16;
+    }
+}
+
+.page-6 {
+    background-color: rgb(0, 0, 0);
+    display: block;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+}
+
+#box-container {
+    top: 90px;
+    text-align: center;
+    position: relative;
+    padding-left: 30%;
+}
+
+#box {
+    top: 20%;
+    width: 70%;
+    padding: 20px;
+    background-color: rgb(15, 15, 15);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    font-family: var(--smooth);
+    color: rgb(117, 117, 117);
+}
+
+#hackbox {
+    color: red;
+    font-weight: bold;
+}
+
+#ceo {
+    color: rgb(117, 117, 117);
+}
+
+#round-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url('/girl.jpg');
+    background-size: cover;
+    position: absolute;
+    bottom: -30px;
+    left: 54%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.left-arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    filter: invert(1) brightness(5);
+    transition: filter 0.3s;
+}
+
+.right-arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    filter: invert(1) brightness(5);
+    transition: filter 0.3s;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    filter: none;
+}
+
+.mount {
+    position: relative;
+    text-align: center;
+}
+
+.ige {
+    width: 100%;
+    height: 350px;
+}
+
+.centerbutt {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 44px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+.centerbutt:hover {
+    background-color: var(--red);
+    color: white;
+
+}
+
+.edbar {
+    display: block;
+    width: 100%;
+    padding-left: 0%;
+    height: max-content;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.edbar .cont {
+    display: flex;
+    justify-content: center;
+    padding-left: 0%;
+}
+
+.edbar .cont .card {
+    width: 100%;
+    margin-top: 5%;
+    padding-left: 3%;
+    text-align: left;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.edbar .cont .card h1 {
+    font-family: 'Playfair display';
+    color: red;
+    font-size: 20px;
+}
+
+.edbar .cont .card h4 {
+    color: #ffffff;
+    display: block;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.edbar .cont .card p {
+    color: rgb(117, 117, 117);
+    font-size: 85%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.edbar .cont .card a {
+    letter-spacing: 40px;
+    width: 30px;
+    text-decoration: none;
+}
+
+.edbar .cont .card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edbar .cont .card .footer h6 {
+    margin: 0;
+    font-size: 14px;
+    color: #9e9191;
+    margin-right: 10px;
+}
+
+nav {
+    position: relative;
+}
+
+i {
+    padding: 3px 22px;
+}
+
+.icons {
+    padding: 10px 20px;
+    float: left;
+    margin-left: 19%;
+    bottom: 5%;
+}
+
+.dummy {
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}

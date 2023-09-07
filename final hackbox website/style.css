@@ -1,0 +1,1316 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:800i&display=swap');
+
+
+/* Fonts and color we gonna use here  */
+
+/* font-family: var(--rough); */
+
+/* font-family: var(--smooth); */
+/* grey color - 666767
+ red color - fe2020 */
+:root {
+    --grey: #666767;
+    --red: #fe2020;
+    --smooth: 'Montserrat', sans-serif;
+    --rough: 'Playfair Display', serif;
+}
+
+* {
+
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px var(--grey);
+        border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--red);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--red);
+    }
+}
+
+.items a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+#myImage {
+    transition: opacity 0.5s ease-in-out;
+}
+
+main {
+    width: 100%;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+/* 
+/* bar  */
+
+
+#progress-bars {
+    font-family: var(--smooth);
+    display: grid;
+    padding-left: 10%;
+    padding-top: 15%;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.bar-container {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .bar {
+    width: 0%;
+    height: 2px;
+    background-color: lightgrey;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding-left: 0%;
+} */
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s ease-in-out;
+}
+
+.percentage {
+    margin-top: 10px;
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top: -20px;
+    /* Adjust this value to position the percentage label */
+    right: 0;
+    /* Position the label at the end of the bar */
+}
+
+.tabar {
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+}
+
+.bar-container h1 {
+    font-family: var(--smooth);
+    color: #ffffff;
+    font-size: 15px;
+    float: left;
+}
+
+.bar-container h2 {
+    font-family: var(--smooth);
+    color: #ffffff;
+    font-size: medium;
+}
+
+*/
+
+/* settingsicon */
+.settings {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: -21px;
+    left: -10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    animation: move1 linear infinite 3s;
+}
+
+.settingbutton {
+    position: absolute;
+    right: 0;
+    height: 40px;
+    margin-top: 10px;
+    width: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    box-shadow: 2px 3px 10px 2px rgb(125, 125, 125);
+    border: none;
+}
+
+.settingbutton:hover {
+    box-shadow: none;
+    transition: box-shadow 0.5s ease;
+}
+
+.settingbuttonset {
+    position: absolute;
+    right: 10px;
+}
+
+@keyframes move1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.navbars {
+    overflow: hidden;
+    background-color: #000000;
+    /* position: fixed; */
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbars .contentnavbar ul.items li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbars .contentnavbar ul.items li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--red);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbars .contentnavbar ul.items li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbars .contentnavbar ul.items li.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.iconsnav {
+    width: auto;
+    top: 0px;
+    right: 0;
+}
+
+
+
+
+/* sophia name */
+.contentnavbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.name {
+    font-size: 300%;
+}
+
+.items {
+    font-family: var(--smooth);
+    font-weight: 600;
+    color: var(--grey);
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* body  */
+.body {
+    display: flex;
+}
+
+.rightbody {
+    width: 50%;
+}
+
+.rightbody img {
+    height: 100%;
+    width: 90%;
+    float: left;
+    margin-top: -10%;
+}
+
+.leftbody {
+    width: 50%;
+    padding: 9% 0% 0% 0%;
+    margin-left: 15%;
+}
+
+.leftbody button {
+    padding: 15px 50px;
+    border-radius: 50px;
+    color: var(--red);
+    border-width: 2.5px;
+    font-family: var(--smooth);
+    background-color: transparent;
+    border-color: var(--red);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.leftbody button:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+.leftbody h4 {
+    font-weight: 600;
+    font-family: var(--smooth);
+    color: var(--red);
+}
+
+.leftbody h2 {
+    margin: 0%;
+    font-size: 350%;
+}
+
+.leftbody h5 {
+    font-family: var(--smooth);
+    color: var(--grey);
+}
+
+/* who am i  */
+
+.whoami {
+    background-color: #0e0f0f;
+}
+
+.line {
+    content: "";
+    display: inline-flex;
+    border-bottom: 0.5px solid #9E9E9E;
+}
+
+.allwho {
+    display: flex;
+    margin-left: 10%;
+}
+
+.whoami h2 {
+    font-family: var(--smooth);
+    color: white;
+    margin-left: 45%;
+    font-weight: 400;
+}
+
+.whoami .dot {
+    color: var(--red);
+}
+
+.whoami .line {
+    width: 10%;
+}
+
+.whoami h1 {
+    color: var(--red);
+    margin-left: 40%;
+    font-size: 45px;
+    font-family: var(--rough);
+}
+
+.square {
+    width: 410px;
+    height: 500px;
+    border: 3px solid var(--red);
+}
+
+.leftwho {
+    margin-left: 7%;
+    margin-top: 5%;
+}
+
+.secgirl {
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    margin-left: 3.5%;
+    margin-top: 3.5%;
+}
+
+.rightwho {
+    font-family: var(--smooth);
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 30%;
+    float: right;
+}
+
+.rightwho h6 {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5;
+}
+
+.rightwho p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.rightwho button {
+    padding: 12px 45px;
+    border-radius: 50px;
+    color: var(--red);
+    border-width: 2.5px;
+    font-family: var(--smooth);
+    background-color: transparent;
+    border-color: var(--red);
+    margin-top: 35%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.rightwho button:hover {
+    background-color: var(--red);
+    color: white;
+    transform: scale(1.05);
+}
+
+.bars {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 500px;
+}
+
+.progress {
+    background: gray;
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 0px;
+    display: flex;
+    height: 10px;
+    width: 500px;
+}
+
+.progress-value {
+    animation: load 2s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fe3636;
+    height: 10px;
+    width: 0;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 68%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.b {
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dbgCol: #000000;
+    --lbgCol: #000000;
+    --priCol: #fe2020;
+    --secCol: #ffffff;
+    --triCol: rgb(117, 117, 117);
+}
+
+
+/*What I Do*/
+.watIDo {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.watIDo .top {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.watIDo .top hr {
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: super;
+    line-height: 5px;
+}
+
+.whoami hr {
+    width: 70px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: super;
+    line-height: 4px;
+}
+
+.watIDo .top h4 {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 5px;
+    margin: 0;
+}
+
+.watIDo .top h1 {
+    color: var(--priCol);
+    font-weight: bolder;
+    line-height: 5px;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.watIDo .top p {
+    color: var(--triCol);
+    font-size: 80%;
+}
+
+.watIDo .cont {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.watIDo .cont .card {
+    padding: 5px 0px 5px 0px;
+    width: 28%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.watIDo .cont .card img {
+    width: 60px;
+    display: block;
+    margin: auto;
+}
+
+.watIDo .cont .card h4 {
+    padding: 10px 0px 20px 0px;
+    color: var(--secCol);
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.watIDo .cont .card p {
+    color: var(--triCol);
+    font-size: 70%;
+}
+
+
+/*Work Experience*/
+.workExp {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: #0e0f0f;
+    font-family: var(--smooth);
+}
+
+.workExp .top {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.workExp .top hr {
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: super;
+    line-height: 5px;
+}
+
+.workExp .top h4 {
+    color: var(--secCol);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 5px;
+    margin: 0;
+}
+
+.workExp .top h1 {
+    color: var(--priCol);
+    font-weight: bolder;
+    line-height: 5px;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.workExp .top p {
+    color: var(--triCol);
+    font-size: 90%;
+}
+
+.workExp .boxy {
+    margin: auto;
+    width: 90%;
+    height: 250px;
+    text-align: center;
+    display: block;
+}
+
+.workExp .lsidtxt {
+    vertical-align: sub;
+    width: 25%;
+    margin: auto;
+    margin-left: 180px;
+    text-align: right;
+    float: left;
+
+}
+
+.workExp .lsidtxt h5 {
+    color: var(--priCol);
+    font-weight: 500;
+    font-size: 95%;
+    line-height: 25px;
+
+}
+
+.workExp .lsidtxt h2 {
+    color: var(--secCol);
+    line-height: 35px;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.workExp .lsidtxt p {
+    color: var(--triCol);
+}
+
+.workExp .rsidtxt {
+    vertical-align: sub;
+    width: 25%;
+    margin: auto;
+    margin-right: 180px;
+    text-align: left;
+    float: right;
+}
+
+.workExp .rsidtxt h5 {
+    color: var(--priCol);
+    font-weight: 500;
+    font-size: 95%;
+    line-height: 25px;
+}
+
+.workExp .rsidtxt h2 {
+    color: var(--secCol);
+    font-size: 120%;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.workExp .rsidtxt p {
+    color: var(--triCol);
+}
+
+.workExp .box {
+    display: inline-block;
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.workExp .box .rbox {
+    width: 160px;
+    height: 50px;
+    background-color: var(--priCol);
+    margin: auto;
+    color: var(--secCol);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workExp .box .wbox {
+    width: 160px;
+    height: 50px;
+    background-color: var(--secCol);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--priCol);
+}
+
+
+/*Our Portfolio*/
+.ourPort {
+    display: block;
+    width: 100%;
+    height: max-content;
+    background-color: var(--dbgCol);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ourPort .top {
+    margin: 0 auto;
+    padding: 0;
+    width: 50%;
+    text-align: center;
+}
+
+.ourPort .top hr {
+    width: 80px;
+    margin: auto;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: super;
+    line-height: 5px;
+}
+
+.ourPort .top h4 {
+    color: var(--secCol);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 5px;
+    margin: 0;
+}
+
+.ourPort .top h1 {
+    color: var(--priCol);
+    font-weight: bolder;
+    line-height: 5px;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.ourPort .top p {
+    color: var(--triCol);
+    font-size: 90%;
+}
+
+
+/*Nav*/
+.ourPort .naav {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.ourPort .naav ul li {
+    color: var(--secCol);
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 5px;
+}
+
+.ourPort .naav ul li,
+.ourPort .naav ul li:after,
+.ourPort .naav ul li:before {
+    transition: all .5s;
+}
+
+.ourPort .stroke ul li {
+    position: relative;
+}
+
+.ourPort .stroke ul li:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #fe2020;
+    height: 3px;
+}
+
+.ourPort .stroke ul li:hover:after {
+    width: 100%;
+}
+
+/*design*/
+.dashed-line {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    width: 1.5px;
+    height: 700px;
+    background-image: linear-gradient(to bottom, #343434 60%, transparent 40%);
+    background-position: center bottom;
+    background-repeat: repeat-y;
+    background-size: 6px 30px;
+}
+
+/* BAR */
+
+#progress-bars {
+    display: grid;
+    padding-left: 10%;
+    padding-top: 8%;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+.bar-container {
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    font-family: var(--smooth);
+    width: 140%;
+    height: 3px;
+    background-color: rgb(97, 97, 97);
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    padding-left: 0%;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: var(--red);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.percentage {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: -20px;
+    /* Adjust this value to position the percentage label */
+    right: 0;
+    /* Position the label at the end of the bar */
+}
+
+.tabar {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+}
+
+.bar-container h1 {
+    margin-bottom: 15px;
+    margin-left: -1px;
+}
+
+.bar-container h1 {
+    font-family: var(--smooth);
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.bar-container h2 {
+    font-family: var(--smooth);
+    color: #ffffff;
+    font-size: medium;
+}
+
+
+
+
+
+
+
+
+
+#scrollToTopBtn {
+    display: none;
+    /* Initially hide the button */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 5px;
+    border-radius: 1000px;
+    background-color: #9e9e9e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure it's above other elements */
+}
+
+
+
+
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#hide-checkbox {
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.toggle {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background: #211042;
+    border-radius: 50px;
+    transition: 500ms;
+    overflow: hidden;
+}
+
+.toggle-button {
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 6px;
+    width: 20px;
+    height: 22px;
+    border-radius: 50%;
+    background: #FAEAF1;
+    overflow: hidden;
+    box-shadow: 0 0 35px 4px rgba(255, 255, 255);
+    transition: all 500ms ease-out;
+}
+
+.crater {
+    position: absolute;
+    display: inline-block;
+    background: #FAEAF1;
+    border-radius: 50%;
+    transition: 500ms;
+}
+
+.crater-1 {
+    background: #FFFFF9;
+    width: 12px;
+    height: 15px;
+    left: 10px;
+    bottom: 5px;
+}
+
+.crater-2 {
+    width: 10px;
+    height: 13px;
+    top: -3px;
+    left: 30px;
+}
+
+.crater-3 {
+    width: 3px;
+    height: 7px;
+    top: 10px;
+    right: -2px;
+}
+
+/* Other crater elements can be similarly adjusted */
+
+.star {
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: 1px 0 2px 2px rgba(255, 255, 255);
+}
+
+.star-1 {
+    width: 6px;
+    height: 6px;
+    right: 50px;
+    bottom: 15px;
+}
+
+
+.star-2 {
+    width: 8px;
+    height: 8px;
+    right: 70px;
+    top: 10px;
+}
+
+.star-3 {
+    width: 5px;
+    height: 5px;
+    right: 4px;
+    bottom: 2px;
+}
+
+.star-4 {
+    width: 3px;
+    height: 3px;
+    right: 3px;
+    bottom: 1px;
+}
+
+.star-5 {
+    width: 4px;
+    height: 4px;
+    right: 10px;
+    bottom: 35px;
+}
+
+.star-6,
+.star-7,
+.star-8 {
+    width: 10px;
+    height: 2px;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    box-shadow: 5px 0px 4px 1px #FFF;
+    animation-name: travel;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+.star-6 {
+    right: 30px;
+    bottom: 30px;
+    animation-delay: -2s;
+}
+
+.star-7 {
+    right: 50px;
+    bottom: 60px;
+}
+
+.star-8 {
+    right: 90px;
+    top: 10px;
+    animation-delay: -4s;
+}
+
+/* Rest of your CSS remains unchanged */
+
+@keyframes travel {
+    0% {
+        transform: rotate(-45deg) translateX(70px);
+    }
+
+    50% {
+        transform: rotate(-45deg) translateX(-20px);
+        box-shadow: 5px 0px 6px 1px #FFF;
+    }
+
+    100% {
+        transform: rotate(-45deg) translateX(-30px);
+        width: 2px;
+        height: 2px;
+        opacity: 0;
+        box-shadow: none;
+    }
+}
+
+#hide-checkbox:checked+.toggle {
+    background: #24D7F7;
+}
+
+#hide-checkbox:checked+.toggle .toggle-button {
+    background: #F7FFFF;
+    transform: translateX(32px);
+    /* Move the button out of the 60px width */
+    box-shadow: 0 0 35px 5px rgba(255, 255, 255);
+}
+
+#hide-checkbox:checked+.toggle .toggle-button .crater {
+    transform: rotate(-45deg) translateX(70px);
+}
+
+#hide-checkbox:checked+.toggle .star {
+    animation:
+        move 2s infinite;
+    transform: none;
+    box-shadow: none;
+}
+
+#hide-checkbox:checked+.toggle .star-1 {
+    width: 40px;
+    height: 10px;
+    border-radius: 10px;
+    background: #FFF;
+    left: 20px;
+    top: 25px;
+    box-shadow: none;
+}
+
+#hide-checkbox:checked+.toggle .star-2 {
+    width: 12px;
+    height: 12px;
+    background: #FFF;
+    left: 26px;
+    top: 23px;
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#hide-checkbox:checked+.toggle .star-3 {
+    width: 16px;
+    height: 16px;
+    background: #FFF;
+    left: 35px;
+    top: 19px;
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#hide-checkbox:checked+.toggle .star-4 {
+    width: 14px;
+    height: 14px;
+    background: #FFF;
+    left: 46px;
+    top: 21px;
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#hide-checkbox:checked+.toggle .star-5 {
+    width: 60px;
+    height: 15px;
+    border-radius: 15px;
+    background: #FFF;
+    left: 30px;
+    bottom: 20px;
+    box-shadow: none;
+}
+
+#hide-checkbox:checked+.toggle .star-6 {
+    width: 18px;
+    height: 18px;
+    background: #FFF;
+    border-radius: 50%;
+    left: 38px;
+    bottom: 20px;
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#hide-checkbox:checked+.toggle .star-7 {
+    width: 24px;
+    height: 24px;
+    background: #FFF;
+    border-radius: 50%;
+    left: 52px;
+    bottom: 20px;
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#hide-checkbox:checked+.toggle .star-8 {
+    width: 21px;
+    height: 21px;
+    background: #FFF;
+    border-radius: 50%;
+    left: 70px;
+    top: 59px;
+    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+@keyframes move {
+    0% {
+        transform: none;
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.hitoggle {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* mobile view  */
+
+@media only screen and (max-width: 600px) {
+
+    .contentnavbar .name {
+        font-size: 150%;
+        margin-left: -5%;
+        overflow-x: hidden;
+    }
+
+    .items {
+        visibility: hidden;
+    }
+
+    .body {
+        display: flex;
+    }
+
+    .hitoggle {
+        display: flex;
+    }
+
+    .leftbody {
+        margin-left: 20%;
+        font-size: 70%;
+    }
+
+    .leftbody button {
+        padding: 10px 10px;
+        border-radius: 50px;
+        color: var(--red);
+        border-width: 2.5px;
+        font-family: var(--smooth);
+        background-color: transparent;
+        border-color: var(--red);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+    }
+
+    .body {
+        display: inline;
+    }
+
+    .leftbody button:hover {
+        background-color: var(--red);
+        color: white;
+    }
+
+    .rightbody img {
+        float: left;
+        height: 35%;
+        width: 50%;
+    }
+
+    .iconsnav {
+        position: relative;
+        display: flex;
+        float: left;
+    }
+
+
+    /* whoami  */
+
+    .whoami h2 {
+        font-size: 100%;
+        margin-left: 30%;
+    }
+
+    .whoami h1 {
+        font-size: 170%;
+    }
+
+    .whoami hr {
+        width: 25%;
+    }
+
+    .whoami .allwho {
+        display: block;
+    }
+
+    .leftwho .square {
+        width: 300px;
+        height: 400px;
+    }
+
+    .leftbody .secgirl {
+        width: 100%;
+        height: 400px;
+    }
+
+    .rightbody {
+        margin-left: 0;
+    }
+    .rightwho h6{
+        width: 100%;
+    }
+    .rightwho p{
+        width: 100%;
+        margin-left: -15%;
+    }
+}
