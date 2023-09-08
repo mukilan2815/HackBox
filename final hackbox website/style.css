@@ -270,9 +270,10 @@ main {
 
 .rightbody img {
     height: 100%;
-    width: 90%;
-    float: left;
-    margin-top: -10%;
+    width: 80%;
+    float: right;
+    margin-top: -15%;
+    bottom: 0;
 }
 
 .leftbody {
@@ -517,7 +518,6 @@ body {
     font-weight: 600;
     font-size: 18px;
     line-height: 5px;
-    margin: 0;
 }
 
 .watIDo .top h1 {
@@ -1263,13 +1263,16 @@ body {
 
     .rightbody img {
         float: left;
-        height: 35%;
-        width: 50%;
+        height: 55%;
+        width: auto;
+        border-radius: 200px;
+        background-color: #211042;
     }
 
     .iconsnav {
         position: relative;
         display: flex;
+        padding-bottom: 10px;
         float: left;
     }
 
@@ -1282,20 +1285,42 @@ body {
     }
 
     .whoami h1 {
-        font-size: 170%;
+        font-size: 150%;
+        margin-left: 27% !important;
     }
 
     .whoami hr {
         width: 25%;
     }
 
+    .rightwho {
+        height: 100%;
+    }
+
+    .rightwho h6 {
+        font-size: small;
+        float: left;
+        margin-left: -190%;
+    }
+
+    .rightwho p {
+        font-size: small;
+        float: left;
+        margin-left: -190%;
+        text-align: left;
+    }
+
+    .rightwho button {
+        margin-left: -170%;
+    }
+
     .whoami .allwho {
-        display: block;
+        display: inline-block;
     }
 
     .leftwho .square {
         width: 300px;
-        height: 400px;
+        height: 360px;
     }
 
     .leftbody .secgirl {
@@ -1306,11 +1331,37 @@ body {
     .rightbody {
         margin-left: 0;
     }
-    .rightwho h6{
+
+    #progress-bars {
+        display: none;
+    }
+
+    .watIDo {
         width: 100%;
     }
-    .rightwho p{
-        width: 100%;
-        margin-left: -15%;
+
+    .watIDo h1 {
+        margin-left: -8%;
     }
+
+    .watIDo h4 {
+        margin-right: -14%;
+    }
+    .watIDo hr{
+        width: 45px !important;
+    }
+
+
+
+    .cont{
+        width: 100% !important;
+        padding: 10px !important;
+
+    }
+    .cont p{
+        text-align: center;
+    }
+
+
+
 }
