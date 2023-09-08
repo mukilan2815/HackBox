@@ -1,68 +1,19 @@
-const toggleButton = document.getElementById("toggleButton");
-const body = document.body;
-const navbar = document.querySelector(".navbars");
-const mainSection = document.querySelector("main");
-const whoamiSection = document.querySelector(".whoami");
-const whatIDoSection = document.querySelector(".watIDo");
-const workExpSection = document.querySelector(".workExp");
-const ourPortfolioSection = document.querySelector(".ourPort");
-const contactSection = document.querySelector(".edbar");
-const page6Section = document.querySelector(".page-6");
-const barss = document.querySelectorAll('.bar'); // Select all bars
+// Define the bars variable and querySelectorAll
+const barss = document.querySelectorAll('.bar');
 
-let darkMode = true; // Track the dark mode state
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleButton");
+    const body = document.body;
 
-toggleButton.addEventListener("click", function () {
-    // Toggle dark mode state
-
-    // Function to toggle section styles
-    function toggleSectionStyles(section, isDarkMode) {
-        if (section) {
-            if (isDarkMode) {
-                section.style.backgroundColor = "#ffffff";
-                const allElements = section.querySelectorAll("*");
-                allElements.forEach(function (element) {
-                    if (getComputedStyle(element).color === "rgb(255, 255, 255)") {
-                        element.style.color = "#000000";
-                    }
-                });
-                
-            } else {
-                section.style.backgroundColor = "#000000"; // Set to dark mode background color
-                const allElements = section.querySelectorAll("*");
-                allElements.forEach(function (element) {
-                    if (getComputedStyle(element).color === "rgb(0, 0, 0)") {
-                        element.style.color = "#ffffff";
-                    }
-                });
-               
-            }
-        }
-    }
-
-    // Toggle styles for each section
-    toggleSectionStyles(navbar, darkMode);
-    toggleSectionStyles(mainSection, darkMode);
-    toggleSectionStyles(whoamiSection, darkMode);
-    toggleSectionStyles(whatIDoSection, darkMode);
-    toggleSectionStyles(workExpSection, darkMode);
-    toggleSectionStyles(ourPortfolioSection, darkMode);
-    toggleSectionStyles(contactSection, darkMode);
-    toggleSectionStyles(page6Section, darkMode);
-
-    // Toggle dark mode for bars as well
-    barss.forEach(bar => {
-        if (darkMode) {
-            bar.style.backgroundColor = "#ffffff";
-            bar.style.color = "#000000";
-            darkMode=!darkMode;
-        } else {
-            bar.style.backgroundColor = "#000000"; // Set to dark mode background color
-            bar.style.color = "#ffffff";
-            darkMode=true;
-        }
+    toggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
     });
 });
+
+
+
+
+
 
 
 

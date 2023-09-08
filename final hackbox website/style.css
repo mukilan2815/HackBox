@@ -54,8 +54,6 @@
 
 main {
     width: 100%;
-    background-color: black;
-    color: rgb(255, 255, 255);
     overflow-x: hidden;
 }
 
@@ -184,7 +182,6 @@ main {
 
 .navbars {
     overflow: hidden;
-    background-color: #000000;
     /* position: fixed; */
     top: 0;
     height: fit-content;
@@ -254,10 +251,12 @@ main {
     justify-content: space-evenly;
 }
 
-.dark-mode {
-    background-color: #000000;
-    color: #ffffff;
+
+.dark-mode.dark-mode {
+    background-color: transparent;
+    color: #000000;
 }
+
 
 /* body  */
 .body {
@@ -318,7 +317,7 @@ main {
 /* who am i  */
 
 .whoami {
-    background-color: #0e0f0f;
+    background-color: #fefefe;
 }
 
 .line {
@@ -483,7 +482,6 @@ body {
     display: block;
     width: 100%;
     height: max-content;
-    background-color: #000000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -719,7 +717,6 @@ body {
     display: block;
     width: 100%;
     height: max-content;
-    background-color: var(--dbgCol);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -916,291 +913,53 @@ body {
 }
 
 
-
-
-
-.wrapper {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}
-
-#hide-checkbox {
-    opacity: 0;
+input[type=checkbox] {
     height: 0;
     width: 0;
+    visibility: hidden;
 }
 
-.toggle {
-    position: relative;
+label {
     cursor: pointer;
-    display: inline-block;
-    width: 60px;
+    text-indent: -9999px;
+    width: 50px;
     height: 30px;
-    background: #211042;
-    border-radius: 50px;
-    transition: 500ms;
-    overflow: hidden;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
 }
 
-.toggle-button {
+label:after {
+    content: '';
     position: absolute;
-    display: inline-block;
-    top: 4px;
-    left: 6px;
-    width: 20px;
-    height: 22px;
-    border-radius: 50%;
-    background: #FAEAF1;
-    overflow: hidden;
-    box-shadow: 0 0 35px 4px rgba(255, 255, 255);
-    transition: all 500ms ease-out;
+    top: 3px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
 }
 
-.crater {
-    position: absolute;
-    display: inline-block;
-    background: #FAEAF1;
-    border-radius: 50%;
-    transition: 500ms;
+input:checked+label {
+    background: #bada55;
 }
 
-.crater-1 {
-    background: #FFFFF9;
-    width: 12px;
-    height: 15px;
-    left: 10px;
-    bottom: 5px;
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
 }
 
-.crater-2 {
+label:active:after {
     width: 10px;
-    height: 13px;
-    top: -3px;
-    left: 30px;
-}
-
-.crater-3 {
-    width: 3px;
-    height: 7px;
-    top: 10px;
-    right: -2px;
-}
-
-/* Other crater elements can be similarly adjusted */
-
-.star {
-    position: absolute;
-    display: inline-block;
-    border-radius: 50%;
-    background: #FFF;
-    box-shadow: 1px 0 2px 2px rgba(255, 255, 255);
-}
-
-.star-1 {
-    width: 6px;
-    height: 6px;
-    right: 50px;
-    bottom: 15px;
 }
 
 
-.star-2 {
-    width: 8px;
-    height: 8px;
-    right: 70px;
-    top: 10px;
-}
-
-.star-3 {
-    width: 5px;
-    height: 5px;
-    right: 4px;
-    bottom: 2px;
-}
-
-.star-4 {
-    width: 3px;
-    height: 3px;
-    right: 3px;
-    bottom: 1px;
-}
-
-.star-5 {
-    width: 4px;
-    height: 4px;
-    right: 10px;
-    bottom: 35px;
-}
-
-.star-6,
-.star-7,
-.star-8 {
-    width: 10px;
-    height: 2px;
-    border-radius: 2px;
-    transform: rotate(-45deg);
-    box-shadow: 5px 0px 4px 1px #FFF;
-    animation-name: travel;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
-}
-
-.star-6 {
-    right: 30px;
-    bottom: 30px;
-    animation-delay: -2s;
-}
-
-.star-7 {
-    right: 50px;
-    bottom: 60px;
-}
-
-.star-8 {
-    right: 90px;
-    top: 10px;
-    animation-delay: -4s;
-}
-
-/* Rest of your CSS remains unchanged */
-
-@keyframes travel {
-    0% {
-        transform: rotate(-45deg) translateX(70px);
-    }
-
-    50% {
-        transform: rotate(-45deg) translateX(-20px);
-        box-shadow: 5px 0px 6px 1px #FFF;
-    }
-
-    100% {
-        transform: rotate(-45deg) translateX(-30px);
-        width: 2px;
-        height: 2px;
-        opacity: 0;
-        box-shadow: none;
-    }
-}
-
-#hide-checkbox:checked+.toggle {
-    background: #24D7F7;
-}
-
-#hide-checkbox:checked+.toggle .toggle-button {
-    background: #F7FFFF;
-    transform: translateX(32px);
-    /* Move the button out of the 60px width */
-    box-shadow: 0 0 35px 5px rgba(255, 255, 255);
-}
-
-#hide-checkbox:checked+.toggle .toggle-button .crater {
-    transform: rotate(-45deg) translateX(70px);
-}
-
-#hide-checkbox:checked+.toggle .star {
-    animation:
-        move 2s infinite;
-    transform: none;
-    box-shadow: none;
-}
-
-#hide-checkbox:checked+.toggle .star-1 {
-    width: 40px;
-    height: 10px;
-    border-radius: 10px;
-    background: #FFF;
-    left: 20px;
-    top: 25px;
-    box-shadow: none;
-}
-
-#hide-checkbox:checked+.toggle .star-2 {
-    width: 12px;
-    height: 12px;
-    background: #FFF;
-    left: 26px;
-    top: 23px;
-    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked+.toggle .star-3 {
-    width: 16px;
-    height: 16px;
-    background: #FFF;
-    left: 35px;
-    top: 19px;
-    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked+.toggle .star-4 {
-    width: 14px;
-    height: 14px;
-    background: #FFF;
-    left: 46px;
-    top: 21px;
-    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked+.toggle .star-5 {
-    width: 60px;
-    height: 15px;
-    border-radius: 15px;
-    background: #FFF;
-    left: 30px;
-    bottom: 20px;
-    box-shadow: none;
-}
-
-#hide-checkbox:checked+.toggle .star-6 {
-    width: 18px;
-    height: 18px;
-    background: #FFF;
-    border-radius: 50%;
-    left: 38px;
-    bottom: 20px;
-    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked+.toggle .star-7 {
-    width: 24px;
-    height: 24px;
-    background: #FFF;
-    border-radius: 50%;
-    left: 52px;
-    bottom: 20px;
-    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked+.toggle .star-8 {
-    width: 21px;
-    height: 21px;
-    background: #FFF;
-    border-radius: 50%;
-    left: 70px;
-    top: 59px;
-    box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-@keyframes move {
-    0% {
-        transform: none;
-    }
-
-    25% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        transform: translateX(-10px);
-    }
-}
 
 .hitoggle {
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -1263,10 +1022,7 @@ body {
 
     .rightbody img {
         float: left;
-        height: 55%;
         width: auto;
-        border-radius: 200px;
-        background-color: #211042;
     }
 
     .iconsnav {
@@ -1347,18 +1103,20 @@ body {
     .watIDo h4 {
         margin-right: -14%;
     }
-    .watIDo hr{
+
+    .watIDo hr {
         width: 45px !important;
     }
 
 
 
-    .cont{
+    .cont {
         width: 100% !important;
         padding: 10px !important;
 
     }
-    .cont p{
+
+    .cont p {
         text-align: center;
     }
 
