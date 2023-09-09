@@ -23,7 +23,7 @@ body {
 }
 
 .page-6 {
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     display: block;
     width: 100%;
     height: max-content;

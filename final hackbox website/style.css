@@ -53,6 +53,8 @@
 }
 
 main {
+    background-color: #ffffff;
+    color: #000000;
     width: 100%;
     overflow-x: hidden;
 }
@@ -251,12 +253,15 @@ main {
     justify-content: space-evenly;
 }
 
-
-.dark-mode.dark-mode {
-    background-color: transparent;
+.light-mode {
+    background-color: #ffffff;
     color: #000000;
 }
 
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
 
 /* body  */
 .body {
@@ -318,6 +323,7 @@ main {
 
 .whoami {
     background-color: #fefefe;
+    color: #000000;
 }
 
 .line {
@@ -333,7 +339,6 @@ main {
 
 .whoami h2 {
     font-family: var(--smooth);
-    color: white;
     margin-left: 45%;
     font-weight: 400;
 }
@@ -381,7 +386,6 @@ main {
 }
 
 .rightwho h6 {
-    color: white;
     font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.5;
@@ -481,6 +485,7 @@ body {
 .watIDo {
     display: block;
     width: 100%;
+    color: #000000;
     height: max-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -511,7 +516,6 @@ body {
 }
 
 .watIDo .top h4 {
-    color: #ffffff;
     display: inline-block;
     font-weight: 600;
     font-size: 18px;
@@ -574,7 +578,7 @@ body {
     display: block;
     width: 100%;
     height: max-content;
-    background-color: #0e0f0f;
+    background-color: #fefefe;
     font-family: var(--smooth);
 }
 
@@ -716,6 +720,7 @@ body {
 .ourPort {
     display: block;
     width: 100%;
+    color: #000000;
     height: max-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -858,7 +863,6 @@ body {
 .percentage {
     margin-top: 10px;
     font-size: 18px;
-    color: white;
     position: absolute;
     top: -20px;
     /* Adjust this value to position the percentage label */
@@ -878,13 +882,11 @@ body {
 
 .bar-container h1 {
     font-family: var(--smooth);
-    color: #ffffff;
     font-size: 20px;
 }
 
 .bar-container h2 {
     font-family: var(--smooth);
-    color: #ffffff;
     font-size: medium;
 }
 
@@ -1088,6 +1090,7 @@ label:active:after {
         margin-left: 0;
     }
 
+    /* bars  */
     #progress-bars {
         display: none;
     }
